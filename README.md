@@ -35,3 +35,7 @@ INSERT INTO `usuario`(`id`, `login`, `nome`, `senha`, `tipo`) VALUES (1,'admin',
 ```
 
 Tudo certo! O console esta sendo executado na porta 50080 (http://localhost:50080) e seu primeiro login é admin e senha admin (recomendamos trocar-los após o primeiro acesso).
+
+## Produção
+
+Recomendamos executar o JAR com 1Gb de reserva de memoria da JVM, para isso execute o comando ``java -jar`` acrescido da opção ``-Xms1024M``.
