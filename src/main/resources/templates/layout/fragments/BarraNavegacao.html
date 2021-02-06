@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+    <nav class="navbar navbar-fixed-top navbar-default js-sticky-reference" id="main-navbar" th:fragment="navbar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-5 titleBar">
+                    <a href="#" class="js-sidebar-toggle menu-toggle"><i class="fa fa-bars"></i></a>
+                </div>
+                <div class="col-sm-5 navbar-brand">
+                    <a href="/">
+                        <img alt="Repita" th:src="@{/images/logo.png}" width="90px" />
+                    </a>
+                </div>
+                <ul class="nav navbar-nav navbar-right logout">
+                    <li>
+                        <a href="/logout"><em class="fa fa-sign-out"></em></a>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</body>
+</html>

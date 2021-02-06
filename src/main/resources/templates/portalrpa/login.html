@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Portal Repita</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/layout/stylesheets/vendors.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/layout/stylesheets/algaworks.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/layout/stylesheets/application.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/layout/stylesheets/layout.css}" />
+
+    <link rel="shortcut icon" th:href="@{/images/favicon.png}" />
+
+</head>
+
+<body th:style="'background: url(' + @{/images/background.jpg} + ')  no-repeat center center fixed; 
+          background-size: 100%;
+          display: flex;
+          flex-direction: column;
+          max-width: 100%;
+          min-height: 100%;
+          width: auto;
+          padding-top: 100px;'">
+    <nav class="navbar navbar-fixed-top" id="main-navbar" th:fragment="navbar" th:style="'z-index: 12 !important;'">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-5 titleBar">
+                    <img width="155px" th:src="@{/images/logo.png}">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="full-body">
+        <section layout:fragment="conteudo">
+            <div class="container-fluid window">
+
+                <input hidden type="text" id="msgErro" th:value="${msgErro}" />
+                <div style="display: none;" class="pop-outer">
+                    <div class="pop-inner">
+                        <button class="close">X</button>
+                        <h1><span th:inline="text">[[${msgErro}]]</span></h1>
+                    </div>
+                </div>
+
+                <div class="img">
+                    <img th:src="@{/images/logo_corp.png}">
+                </div>
+                <form method="POST" action="/logar" th:object="${usuario}" class="form-vertical  js-form-loading">
+                    <div class="camps">
+                        <div th:object="${usuario}">
+                            <div hidden class="col-sm-2" th:classappend="${#fields.hasErrors('id')} ? has-error">
+                                <input id="id" type="text" class="form-control" th:field="*{id}" />
+                            </div>
+                            <div class="col-sm-12" th:classappend="${#fields.hasErrors('login')} ? has-error">
+                                <input id="login" type="text" class="form-control" placeholder="Login" th:field="*{login}" />
+                            </div>
+                            <div class="col-sm-12" th:classappend="${#fields.hasErrors('senha')} ? has-error">
+                                <input id="senha" type="password" class="form-control" placeholder="Senha" th:field="*{senha}" />
+                            </div>
+                            <div hidden class="col-sm-2" th:classappend="${#fields.hasErrors('nome')} ? has-error">
+                                <input id="nome" type="text" class="form-control" th:field="*{nome}" />
+                            </div>
+                        </div>
+                        <!--<a href="" class="link pointer" data-toggle="modal" data-target="#myModal">Esqueceu a senha?</a>-->
+                    </div>
+                    <div class="container-fluid">
+                        <button class="btn" type="submit">Logar</button>
+                    </div>
+                </form>
+            </div>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+            <script>
+                var erro = document.getElementById('msgErro');
+
+                if(erro.value != ""){
+                    $(".pop-outer").fadeIn("slow");
+                }
+
+                $(document).ready(function (){
+                    $(".close").click(function (){
+                        $(".pop-outer").fadeOut("slow");
+                    });
+                    $(".pop-outer").click(function (){
+                        $(".pop-outer").fadeOut("slow");
+                    });
+                });
+            </script>
+        </section>
+    </div>
+</body>
+
+</html>

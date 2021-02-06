@@ -1,0 +1,262 @@
+.navbar-default{
+    z-index: 1 !important;
+}
+
+.aw-layout-sidebar{
+    z-index: 0 !important;
+}
+
+.form-control{
+    background-color: #192126 !important;
+    border-color: #192126 !important;
+}
+
+.titleBar{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
+#reloader{
+    background-color: #192126;
+}
+
+.titleBar:hover{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
+.logout{
+    margin-right: 1px;
+}
+
+.logout a:hover{
+    color: #999 !important;
+}
+
+.btn{
+    background-color: #192126 !important;
+    border-color: #192126 !important;
+    color: #777 !important;
+    margin-top: 15px;
+}
+
+.btn-plus{
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 25px;
+    line-height: 1.42857143;
+    border-radius: 2px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.minHeighTabs{
+    min-height: 170px;
+}
+
+.menu-toggle{
+    margin-right: 8px;
+    color: white;
+}
+
+.pull-bottom{
+    width: 100%;
+    padding: 8px 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.menu-toggle:hover{
+    margin-right: 8px;
+    color: rgb(192, 192, 192);
+}
+
+#overlay {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.67);
+    z-index: 199999;
+    cursor: pointer;
+}
+
+@keyframes lds-rolling {
+    0% {
+        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@-webkit-keyframes lds-rolling {
+    0% {
+        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.lds-rolling {
+    position: relative;
+}
+
+.lds-rolling div,
+.lds-rolling div:after {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border: 20px solid #000000;
+    border-top-color: transparent;
+    border-radius: 50%;
+}
+
+.lds-rolling div {
+    -webkit-animation: lds-rolling 1s linear infinite;
+    animation: lds-rolling 1s linear infinite;
+    top: 100px;
+    left: 100px;
+}
+
+.lds-rolling div:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.lds-rolling {
+    width: 200px !important;
+    height: 200px !important;
+    -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+    transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+}
+
+.invisible {
+    display: none !important;
+}
+
+.load {
+    width: 100%;
+    height: 100%;
+    z-index:  200000;
+    top: 100px;
+    margin: auto;
+}
+
+#results{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.label{
+    background: #969696;
+    color: aliceblue;
+    margin-bottom: 0;
+    padding: 10px 100% 10px 10px;
+    position: relative;
+    font-size: 15px;
+}
+
+.label:hover, .label.active{
+    background: rgb(20, 101, 143);
+}
+
+.label::before{
+    background: #969696;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.full-body {
+    position: fixed;
+    top: 0;
+    margin: auto;
+    overflow: auto;
+    background: rgba(0, 0, 0, .1) linear-gradient(180deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, .1)) repeat-x;
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+}
+
+.window {
+    background: rgba(0, 0, 0, .1) linear-gradient(180deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .9)) repeat-x !important;
+    padding: 30px 0 30px 0;
+    border-radius: 2%;
+    text-align: center;
+    margin-top: 11%;
+    width: 50%;
+}
+
+.camps {
+    color: white;
+}
+
+.camps input {
+    margin: 10px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.img img {
+    width: 25%;
+    margin-bottom: 30px;
+}
+
+.link {
+    margin: 20px 0px 20px 0px;
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.pop-outer {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.pop-inner {
+    background-color: #fff;
+    padding: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}

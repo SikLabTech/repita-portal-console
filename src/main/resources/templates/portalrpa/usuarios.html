@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/LayoutPadrao}">
+
+    <head>
+        <title>Usuários</title>
+    </head>
+
+    <body>
+        <section layout:fragment="conteudo">
+            <div class="page-header">
+                <div class="container-fluid">
+                    <h1>Usuários</h1>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th class="text-center">#</th>
+                            <th class="text-center">Nome</th>
+                            <th class="text-center">Login</th>
+                            <th class="text-center">Tipo</th>
+                            <th class="text-center">Editar</th>
+                            <th class="text-center">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr th:each="usuario : ${usuarios}">
+                            <td><span th:text="${usuario.id}"></span></td>
+                            <td><span th:text="${usuario.nome}"></span></td>
+                            <td><span th:text="${usuario.login}"></span></td>
+                            <td><span th:text="${usuario.tipo}"></span></td>
+                            <td><a class="waves-effect waves-light btn-small" th:href="@{/editarUsuario(id = ${usuario.id})}"><i class="material-icons left"><span class="glyphicon glyphicon-edit text-warning"></span></i></a></td>
+                            <td><a class="waves-effect waves-light btn-small" th:href="@{/excluirUsuario(id = ${usuario.id})}"><i class="material-icons left"><span class="glyphicon glyphicon-trash text-danger"></span></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="container-fluid">
+                <div class="text-center">
+                    <a href="/adicionarUsuario" type="button" class="btn-plus text-success">
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                    </a>
+                </div>
+            </div>   
+        </section>
+    </body>
+</html>
