@@ -8,7 +8,7 @@
 
 ### Console de gerenciamento para configuração de cronogramas de execução de aplicações JAVA
 
-Desenvolvidor com <a href="https://spring.io" target="_blank">Spring</a> e Thymeleaf, utiliza de uma schedule que a cada 1 minuto verifica se algum cronograma cadastrado deve ser executado. Quando é localizado um cronograma, o console se conecta com o receptor vinculado e executa o JAR no mesmo.
+Desenvolvido com <a href="https://spring.io" target="_blank">Spring</a> e Thymeleaf, utiliza de uma schedule que a cada 1 minuto verifica se algum cronograma cadastrado deve ser executado. Quando é localizado um cronograma, o console se conecta com o receptor vinculado e executa o JAR no mesmo.
 
 Este console depende de um receptor (<a href="https://github.com/SikLabTech/repita-portal-receptor">click aqui para acessar o repositório</a>).
 
